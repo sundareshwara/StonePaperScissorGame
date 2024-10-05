@@ -76,3 +76,44 @@ button:hover {
 #final-score {
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        background-color: #f4f4f9;
+    }
+
+    center {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 18px;
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+
+    #Moves, #Results, #scores, #Attempts {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    #Results {
+        padding: 15px;
+    }
+
+    #captureTemplate {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 26px;
+    }
+
+    button i {
+        margin-right: 8px;
+    }
+}
