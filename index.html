@@ -3,34 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stone Paper Scissors Game</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Stone Paper Scissors Game</title>
 </head>
 <body>
     <center>
-        <p>Welcome to the Stone Paper Scissors game!</p>
-        
-        <div class="game-buttons">
-            <button id="stoneBtn" onclick="stoneClick()">Stone</button>
-            <button id="paperBtn" onclick="paperClick()">Paper</button>
-            <button id="scissorBtn" onclick="scissorClick()">Scissor</button>
+        <div id="greeting-section">
+            <h2>Welcome to the Game!</h2>
+            <div id="name-input-container">
+                <input type="text" id="username" placeholder="Enter Your Name">
+                <button id="startGameBtn" onclick="startGame()">Let's Play</button>
+            </div>
         </div>
-
-        <br><br>
-
-        <p id="Moves"></p>
-        <p id="Results"></p>
-
-        <div id="score-tracker">
-            <p>Wins: <span id="winCount">0</span></p>
-            <p>Losses: <span id="loseCount">0</span></p>
-            <p>Ties: <span id="tieCount">0</span></p>
-            <p>Total Attempts: <span id="attemptCount">0</span></p>
+        <div id="game-section" style="display: none;">
+            <p id="greeting"></p>
+            <div class="game-buttons">
+                <button id="stoneBtn" onclick="stoneClick()"><i class="fas fa-hand-rock"></i> Stone</button>
+                <button id="paperBtn" onclick="paperClick()"><i class="fas fa-hand-paper"></i> Paper</button>
+                <button id="scissorBtn" onclick="scissorClick()"><i class="fas fa-hand-scissors"></i> Scissors</button>
+            </div>
+            <p id="Moves"></p>
+            <p id="Results"></p>
+            <div id="score-tracker">
+                <p><i class="fas fa-trophy"></i> Wins: <span id="winCount">0</span></p>
+                <p><i class="fas fa-times-circle"></i> Losses: <span id="loseCount">0</span></p>
+                <p><i class="fas fa-handshake"></i> Ties: <span id="tieCount">0</span></p>
+            </div>
+            <button id="resetBtn" onclick="reset()">Reset</button>
         </div>
-
-        <button id="resetBtn" onclick="reset()">Reset</button>
+        <div id="achievement-section" style="display: none;">
+            <p id="achievement-message"></p>
+            <div id="star-container">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+            </div>
+            <div id="final-score">
+                <p><i class="fas fa-trophy"></i> Total Wins: <span id="finalWinCount">0</span></p>
+                <p><i class="fas fa-times-circle"></i> Total Losses: <span id="finalLossCount">0</span></p>
+                <p><i class="fas fa-handshake"></i> Total Ties: <span id="finalTieCount">0</span></p>
+                <p><i class="fas fa-chart-line"></i> Total Attempts: <span id="finalAttemptCount">0</span></p>
+            </div>
+            <p id="consolidated-result"></p>
+            <button onclick="continueGame()">Continue Game</button>
+        </div>
     </center>
-
     <script src="index.js"></script>
 </body>
 </html>
