@@ -18,65 +18,61 @@ center {
     width: 400px;
 }
 
+h2 {
+    color: #ffde59;
+}
+
+#name-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #ffde59; /* Outline color */
+    border-radius: 5px;
+    outline: none; /* Remove default outline */
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #ffc107; /* Change outline color on focus */
+}
+
 button {
-    background-color: #339989;
-    color: white;
-    padding: 10px 20px;
+    background-color: #ffde59;
     border: none;
     border-radius: 5px;
+    padding: 10px 15px;
     cursor: pointer;
-    margin: 5px;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #7de2d1;
-}
-
-#resetBtn {
-    background-color: #2b2c28;
-}
-
-#resetBtn:hover {
-    background-color: #7de2d1;
-}
-
-#Moves, #Results {
-    font-size: 16px;
+    color: black;
+    font-weight: bold;
     margin-top: 10px;
 }
 
-#Results {
-    font-weight: bold;
-    padding: 10px;
-    margin: 10px 0;
+button:hover {
+    background-color: #ffc107;
+}
+
+.game-buttons {
+    margin: 20px 0;
 }
 
 #score-tracker {
-    background-color: #339989;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 15px;
-    font-size: 16px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-    
-    button {
-        width: 100%;
-        padding: 12px 16px;
-        margin: 8px 0;
-    }
+#achievement-section {
+    text-align: center;
+}
 
-    .game-buttons {
-        margin-top: 20px;
-    }
+.star {
+    color: gold;
+    margin: 0 2px;
+}
 
-    #Moves, #Results {
-        font-size: 18px;
-    }
+#final-score {
+    margin-top: 20px;
 }
